@@ -4,7 +4,7 @@
 12/05/2023
 
 ### Project Title
-ats42b/pdsnd_github
+ *A.Seery Project 3* ats42b/pdsnd_github 
 
 ### Description
 This project is a part of the Udacity learning program. The bikeshare.py script analyzes bikeshare data from three major U.S. cities - Chicago, New York City, and Washington D.C. It provides statistical information on bikehire in those cities during 2017.
