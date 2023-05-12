@@ -20,6 +20,13 @@ Before running the bikeshare.py script, you need to install Python and the follo
 **Please note** that the bikeshare data files for the three cities (Chicago, New York City, and Washington D.C.) are ***not*** included in this repository due to their size. 
 They are referenced below for completness. 
 
-### Credits
+### References
+- [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+- [Basic Writing and formating syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+### Good to know
+- [Markdown Live Preview](https://markdownlivepreview.com/)
+
+Used to check my ReadMe file as it was created.
 
 
