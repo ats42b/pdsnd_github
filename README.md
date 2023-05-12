@@ -9,6 +9,12 @@ ats42b/pdsnd_github
 ### Description
 This project is a part of the Udacity learning program. The bikeshare.py script analyzes bikeshare data from three major U.S. cities - Chicago, New York City, and Washington D.C. It provides statistical information on bikehire in those cities during 2017.
 
+## Installation 
+Before running the bikeshare.py script, you need to install Python and the following Python libraries installed:
+- [NumPy](http://www.numpy.org/)
+- [Pandas](http://pandas.pydata.org/)
+
+
 ### Files used
 **bikeshare.py**: The main script. 
 **Please note** that the bikeshare data files for the three cities (Chicago, New York City, and Washington D.C.) are ***not*** included in this repository due to their size. 
