@@ -27,30 +27,30 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     
     while True:
-        city = input('Enter city name (chicago, new york city, or washington): ').lower()
+        city = input(Fore.GREEN +'Enter city name (chicago, new york city, or washington ): ' + Fore.RESET).lower()
         if city in CITY_DATA:
             break
         else:
-            print('Invalid city name. Please try again.')
+            print(Fore.GREEN +'Invalid city name. Please try again.'+ Fore.RESET)
 
     # get user input for month (all, january, february, ... , june)
     
     while True:
-        month = input('Enter month (all, january, february, ... , june): ').lower()
+        month = input(Fore.GREEN +'Enter month (all, january, february, ... , june): '+ Fore.RESET).lower()
         if month in months:
             break
         else:
-            print('Invalid month. Please try again.')
+            print(Fore.GREEN +'Invalid month. Please try again.'+ Fore.RESET)
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     
     while True:
-        day = input('Enter day of week (all, monday, tuesday, ... , sunday): ').lower()
+        day = input(Fore.GREEN +'Enter day of week (all, monday, tuesday, ... , sunday): '+ Fore.RESET).lower()
         if day in days:
             break
         else:
-            print('Invalid day. Please try again.')
+            print(Fore.GREEN +'Invalid day. Please try again.'+ Fore.RESET)
 
     print('-'*40)
     return city, month, day
