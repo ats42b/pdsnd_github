@@ -1,6 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
+import questionary
 from colorama import init, Fore
 
 init()
@@ -24,14 +25,15 @@ def get_filters():
     """
     print(Fore.GREEN + 'Hello! Let\'s explore some US bikeshare data!' + Fore.RESET)
     
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+# get user input for city (chicago, new york city, washington). Use select to prevent typos
     
-    while True:
-        city = input(Fore.GREEN + 'Enter city name: ' + Fore.RESET + '(chicago, new york city, or washington): ').lower()
-        if city in CITY_DATA:
-             break
-        else:
-            print(Fore.GREEN +'Invalid city name. Please try again.'+ Fore.RESET)
+    city = questionary.select(
+        "Select a city:",
+        choices=[
+            'chicago',
+            'new york city',
+            'washington'
+        ]).ask()
 
     # get user input for month (all, january, february, ... , june)
     
