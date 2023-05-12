@@ -1,18 +1,17 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
 12/05/2023
 
-### Project Title
+## Project Title
  *A.Seery Project 3* ats42b/pdsnd_github 
 
-### Description
+## Description
 This project is a part of the Udacity learning program. The bikeshare.py script analyzes bikeshare data from three major U.S. cities - Chicago, New York City, and Washington D.C. It provides statistical information on bikehire in those cities during 2017.
 
-## Installation 
+### Installation 
 Before running the bikeshare.py script, you need to install Python and the following Python libraries installed:
 - [NumPy](http://www.numpy.org/)
 - [Pandas](http://pandas.pydata.org/)
+
 
 
 ### Files used
