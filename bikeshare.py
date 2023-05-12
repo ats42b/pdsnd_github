@@ -35,24 +35,36 @@ def get_filters():
             'washington'
         ]).ask()
 
-    # get user input for month (all, january, february, ... , june)
-    
-    while True:
-        month = input(Fore.GREEN +'Enter month ' + Fore.RESET + 'Typing all provides every available month  (' + Fore.RED + 'all' + Fore.RESET + ', january, february, ... , june): ').lower()
-        if month in months:
-            break
-        else:
-            print(Fore.GREEN +'Invalid month. Please try again.'+ Fore.RESET)
+# get user input for month (all, january, february, ... , june)
+    month = questionary.select(
+        "Press RETURN to select ALL months, or select a single month from the list :",
+        choices=[
+            'All',
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June'
+        ]).ask().lower()  # Convert the input to lowercase
 
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-    days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    month_number = months.index(month)
+        
+
+# get user input for day of week (all, monday, tuesday, ... sunday)
+    day = questionary.select(
+        "Press RETURN to select ALL days, or select a single day from the list :",
+        choices=[
+            'All',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday'
+        ]).ask().lower()  # Convert the input to lowercase   
     
-    while True:
-        day = input(Fore.GREEN +'Enter day of week. '+ Fore.RESET + ' Typing all provides every weekday ( ' + Fore.RED + 'all' + Fore.RESET + ', monday, tuesday, ... , sunday): ').lower()
-        if day in days:
-            break
-        else:
-            print(Fore.GREEN +'Invalid day. Please try again.'+ Fore.RESET)
 
     print('-'*40)
     return city, month, day
