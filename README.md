@@ -6,6 +6,11 @@
 
 ## Description
 This project is a part of the Udacity learning program. The bikeshare.py script analyzes bikeshare data from three major U.S. cities - Chicago, New York City, and Washington D.C. It provides statistical information on bikehire in those cities during 2017.
+Also **please note**: This is an exercise in git and github usage, if it were a real attempt to share the python program this description would include the structure of each  ".CSV" file so that the program could be run using similar content.
+
+- chicago.csv: Bikeshare data for Chicago
+- new_york_city.csv: Bikeshare data for New York City
+- washington.csv: Bikeshare data for Washington D.C. 
 
 ### Installation 
 Before running the bikeshare.py script, you need to install Python and the following Python libraries installed:
