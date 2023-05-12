@@ -27,16 +27,16 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     
     while True:
-        city = input(Fore.GREEN +'Enter city name (chicago, new york city, or washington ): ' + Fore.RESET).lower()
+        city = input(Fore.GREEN + 'Enter city name: ' + Fore.RESET + '(chicago, new york city, or washington): ').lower()
         if city in CITY_DATA:
-            break
+             break
         else:
             print(Fore.GREEN +'Invalid city name. Please try again.'+ Fore.RESET)
 
     # get user input for month (all, january, february, ... , june)
     
     while True:
-        month = input(Fore.GREEN +'Enter month (all, january, february, ... , june): '+ Fore.RESET).lower()
+        month = input(Fore.GREEN +'Enter month ' + Fore.RESET + 'Typing all provides every available month  (' + Fore.RED + 'all' + Fore.RESET + ', january, february, ... , june): ').lower()
         if month in months:
             break
         else:
@@ -46,7 +46,7 @@ def get_filters():
     days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     
     while True:
-        day = input(Fore.GREEN +'Enter day of week (all, monday, tuesday, ... , sunday): '+ Fore.RESET).lower()
+        day = input(Fore.GREEN +'Enter day of week. '+ Fore.RESET + ' Typing all provides every weekday ( ' + Fore.RED + 'all' + Fore.RESET + ', monday, tuesday, ... , sunday): ').lower()
         if day in days:
             break
         else:
