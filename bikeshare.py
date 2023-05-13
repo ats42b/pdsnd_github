@@ -1,6 +1,10 @@
 import time
 import pandas as pd
 import numpy as np
+import questionary
+from colorama import init, Fore
+
+init()
 
 CITY_DATA = {
     'chicago': 'C:/Users/A.Seery/Documents/chicago.csv',
@@ -19,35 +23,48 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print(Fore.GREEN + 'Hello! Let\'s explore some US bikeshare data!' + Fore.RESET)
     
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+# get user input for city (chicago, new york city, washington). Use select to prevent typos
     
-    while True:
-        city = input('Enter city name (chicago, new york city, or washington): ').lower()
-        if city in CITY_DATA:
-            break
-        else:
-            print('Invalid city name. Please try again.')
+    city = questionary.select(
+        "Select a city:",
+        choices=[
+            'chicago',
+            'new york city',
+            'washington'
+        ]).ask()
 
-    # get user input for month (all, january, february, ... , june)
-    
-    while True:
-        month = input('Enter month (all, january, february, ... , june): ').lower()
-        if month in months:
-            break
-        else:
-            print('Invalid month. Please try again.')
+# get user input for month (all, january, february, ... , june)
+    month = questionary.select(
+        "Press RETURN to select ALL months, or select a single month from the list :",
+        choices=[
+            'All',
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June'
+        ]).ask().lower()  # Convert the input to lowercase
 
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-    days = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    month_number = months.index(month)
+        
+
+# get user input for day of week (all, monday, tuesday, ... sunday)
+    day = questionary.select(
+        "Press RETURN to select ALL days, or select a single day from the list :",
+        choices=[
+            'All',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday'
+        ]).ask().lower()  # Convert the input to lowercase   
     
-    while True:
-        day = input('Enter day of week (all, monday, tuesday, ... , sunday): ').lower()
-        if day in days:
-            break
-        else:
-            print('Invalid day. Please try again.')
 
     print('-'*40)
     return city, month, day
